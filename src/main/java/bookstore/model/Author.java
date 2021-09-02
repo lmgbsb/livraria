@@ -5,11 +5,11 @@ import java.time.LocalDate;
 import lombok.Getter;
 
 @Getter
-public class Autor {
+public class Author {
 	
 	
-	private String nome;
+	private String name;
 	private String email;
-	private LocalDate dataNascimento;
-	private String miniCurriculo;
+	private LocalDate birthDate;
+	private String miniCurriculum;
 }

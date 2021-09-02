@@ -10,8 +10,52 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body>
-		<h1>
-			Livros
-		</h1>
+		<div class="container">
+			<div id="cadastro_autor">
+				<form method="post" action="author">
+					<table>
+						<tr>
+							<td align="right">
+								Nome:
+							</td>	
+							<td>
+								<input type="text" name="name">
+							</td>						
+						</tr>
+						<tr>
+							<td align="right">
+								Email:
+							</td>	
+							<td>
+								<input type="text" name="email">
+							</td>						
+						</tr>
+						<tr>
+							<td align="right">
+								Data Nascimento:
+							</td>	
+							<td>
+								<input type="text" name="birthDate">
+							</td>						
+						</tr>
+						<tr>
+							<td align="right">
+								Mini Currículo:
+							</td>	
+							<td>
+								<input type="text" name="miniCurriculum">
+							</td>						
+						</tr>
+						<tr>
+							<td colspan="2" align="center">
+								<input type="submit" value="Cadastrar">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div id="lista_autores">
+			</div>
+		</div>
 	</body>
 </html>
