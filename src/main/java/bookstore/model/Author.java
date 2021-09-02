@@ -2,9 +2,11 @@ package bookstore.model;
 
 import java.time.LocalDate;
 
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
+@Builder
 public class Author {
 	
 	
