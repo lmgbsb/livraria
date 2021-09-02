@@ -8,22 +8,30 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bookstore.model.Author;
+import bookstore.service.AuthorService;
+
 @WebServlet("/author")
 public class AuthorController extends HttpServlet{
 
 	
+	private AuthorService authorService;
+	
+	
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void init() throws ServletException {
+		authorService = new AuthorService();
+	}
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+					throws ServletException, IOException {
 
 	}
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String name = request.getParameter("name");
-		System.out.println(name);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+					throws ServletException, IOException {
+		
+		Author author = authorService.build(request);
+		authorService.save(author);
 	}
-	
-	
-	
-
 }
