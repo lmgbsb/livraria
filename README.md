@@ -4,6 +4,10 @@ O objetivo deste repositório é desenvolver o projeto final do Bootcamp Java da
 
 #### Primeiro Módulo
 
-O projeto do primeiro é a construção de uma aplicação Java Web para cadastrar e listar autores de livros utilizando Servlet, JSP e JDBC,
+O projeto do primeiro módulo é a construção de uma aplicação Java Web para cadastrar e listar autores de livros utilizando Servlet, JSP e JDBC,
 
 ![](./src/main/webapp/img/tela_cadastro_autores.png)
+
+O banco de dados MySQL do primeiro módulo consistirá de apenas uma tabela:
+
+![](./src/main/webapp/img/210902-bookstore_erd.png)
