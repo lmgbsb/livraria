@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bookstore.model.Author;
 import bookstore.service.AuthorService;
 
 @WebServlet("/author")
@@ -26,7 +25,6 @@ public class AuthorController extends HttpServlet{
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 					throws ServletException, IOException {
 		
-
 		request.setAttribute("authors", authorService.findAll());
 		request.getRequestDispatcher("WEB-INF/jsp/autores.jsp").forward(request, response);
 	}
