@@ -50,7 +50,6 @@ public class AuthorDAO {
 				Map<String, Object> autor = new HashMap<>();
 				autor.put("name", rs.getString("name"));
 				autor.put("email", rs.getString("email"));
-				//autor.put("birthDate", rs.getDate("birth_date").toLocalDate());
 				autor.put("birthDate", rs.getDate("birth_date"));
 				autor.put("miniCurriculum", rs.getString("mini_curriculum"));
 				autores.add(autor);

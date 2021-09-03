@@ -28,4 +28,7 @@ public class AuthorService {
 	public Author build(HttpServletRequest request) {
 		return authorFactory.build(request);
 	}	
+	public void save(HttpServletRequest request) {
+		save(authorFactory.build(request));
+	}	
 }

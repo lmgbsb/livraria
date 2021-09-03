@@ -34,8 +34,7 @@ public class AuthorController extends HttpServlet{
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 					throws ServletException, IOException {
 		
-		Author author = authorService.build(request);
-		authorService.save(author);
+		authorService.save(request);
 		response.sendRedirect("author");
 	}
 }
