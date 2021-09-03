@@ -34,6 +34,7 @@ public class AuthorDAO {
 			saveStatement.setString(4, author.getMiniCurriculum());
 			saveStatement.execute();
 			connection.commit();
+			connection.close();
 		}catch(Exception e){
 			System.out.println(e);
 		}
@@ -42,7 +43,8 @@ public class AuthorDAO {
 		List<Map<String, Object>> autores = new ArrayList<>();
 		try {
 			String findAllAuthors = "select * from author";
-			PreparedStatement ps = connectionFactory.getConnection().prepareStatement(findAllAuthors);
+			Connection connection = connectionFactory.getConnection();
+			PreparedStatement ps = connection.prepareStatement(findAllAuthors);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next()) {
 				Map<String, Object> autor = new HashMap<>();
@@ -53,6 +55,7 @@ public class AuthorDAO {
 				autor.put("miniCurriculum", rs.getString("mini_curriculum"));
 				autores.add(autor);
 			}			
+			connection.close();
 		}catch(Exception e) {
 			System.out.println(e);
 		}
