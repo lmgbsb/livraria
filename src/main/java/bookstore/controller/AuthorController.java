@@ -28,7 +28,7 @@ public class AuthorController extends HttpServlet{
 		
 
 		request.setAttribute("authors", authorService.findAll());
-		request.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/jsp/autores.jsp").forward(request, response);
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
