@@ -25,7 +25,10 @@ public class AuthorController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 					throws ServletException, IOException {
+		
 
+		request.setAttribute("authors", authorService.findAll());
+		request.getRequestDispatcher("WEB-INF/jsp/index.jsp").forward(request, response);
 	}
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
@@ -33,5 +36,6 @@ public class AuthorController extends HttpServlet{
 		
 		Author author = authorService.build(request);
 		authorService.save(author);
+		response.sendRedirect("author");
 	}
 }

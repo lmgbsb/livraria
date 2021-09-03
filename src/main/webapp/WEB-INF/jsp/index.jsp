@@ -51,10 +51,31 @@
 								<input type="submit" value="Cadastrar">
 							</td>
 						</tr>
+						
 					</table>
 				</form>
 			</div>
 			<div id="lista_autores">
+				<table>
+					<tr>
+						<th>
+							Nome
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Data de Nascimento
+						</th>
+					</tr>
+					<c:forEach var="author" items="${authors}">
+						<tr>
+							<td>${author.name}</td>
+							<td>${author.email}</td>
+							<td>${author.birthDate}</td>
+						</tr>
+					</c:forEach>
+				</table>
 			</div>
 		</div>
 	</body>
