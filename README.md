@@ -1,6 +1,6 @@
 # Livraria
 
-O objetivo deste repositório é desenvolver o projeto final do Bootcamp Java da [Alura](https://www.alura.com.br/bootcamp/back-end-java/matriculas-abertas) em 12 semanas, a partir de 31/08/2021
+O objetivo deste repositório é desenvolver o projeto do primeiro módulo do Bootcamp Java da [Alura](https://www.alura.com.br/bootcamp/back-end-java/matriculas-abertas).
 
 #### Primeiro Módulo
 
